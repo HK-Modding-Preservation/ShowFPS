@@ -1,5 +1,4 @@
-﻿using System.Globalization;
-using Modding;
+﻿using Modding;
 using UnityEngine;
 
 namespace ShowFPS
@@ -10,15 +9,6 @@ namespace ShowFPS
         {
             GameObject go = new GameObject("fps counter", typeof(FpsCounter));
             GameObject.DontDestroyOnLoad(go);
-
-            ModHooks.ApplicationQuitHook += () =>
-            {
-                //var counter = go.GetComponent<FpsCounter>();
-                //foreach (var fps in counter.GetFpsNumbers())
-                //{
-                //    Log("[FPS] - " + fps.ToString("F1", CultureInfo.InvariantCulture));
-                //}
-            };
         }
 
         public override void Initialize()
